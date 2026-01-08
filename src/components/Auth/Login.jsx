@@ -1,15 +1,15 @@
 import { useState } from "react";
 
-const Login = () => {
-
-    const [email, setEmail] = useState('')
-    const [password, setPassword] = useState('')
+const Login = ({ handleLogin }) => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    
-    setEmail('')
-    setPassword('')
+    handleLogin(email, password);
+
+    setEmail("");
+    setPassword("");
   };
 
   return (
@@ -25,10 +25,9 @@ const Login = () => {
               Email
             </label>
             <input
-
-            onChange={(e)=>{setEmail(e.target.value)}}
-
-
+              onChange={(e) => {
+                setEmail(e.target.value);
+              }}
               className="text-xl  outline-0 border-b-2  pb-1"
               type="text"
               value={email}
@@ -40,7 +39,9 @@ const Login = () => {
               Password
             </label>
             <input
-            onChange={(e)=>{setPassword(e.target.value)}}
+              onChange={(e) => {
+                setPassword(e.target.value);
+              }}
               className="text-xl  outline-0 border-b-2  pb-2"
               type="password"
               value={password}
