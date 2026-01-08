@@ -1,6 +1,6 @@
 import React from "react";
 
-const EmpTaskCard = () => {
+const EmpTaskCard = ({data}) => {
   return (
     <div
       id="tasklist"
