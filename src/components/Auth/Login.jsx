@@ -15,7 +15,7 @@ const Login = ({ handleLogin }) => {
   return (
     <>
       <div className=" flex items-center justify-center bg-gray-500 w-full h-screen  ">
-        <div className=" w-[80%] h-[50%] lg:w-[50%] lg:h-[65%] flex flex-col items-center gap-2 bg-linear-to-b from-[#1b57849c] to-[#1e1c1cc9]  rounded-2xl shadow-[0px_2px_4px_3px_#fff]  pl-2  text-white">
+        <div className=" w-[80%] h-[50%] lg:w-[50%] lg:h-[65%]  flex flex-col items-center gap-2 bg-linear-to-b from-[#1b57849c] to-[#1e1c1cc9]  rounded-2xl shadow-[0px_2px_4px_3px_#fff]  pl-2  text-white">
           <h1 className="text-4xl font-semi-bold uppercase  py-8">Login</h1>
           <form
             onSubmit={(e) => handleSubmit(e)}
@@ -32,7 +32,7 @@ const Login = ({ handleLogin }) => {
               type="text"
               value={email}
               id="email"
-              placeholder="Enter your email"
+              placeholder="Enter your email (Admin: admin@me.com/ Employee: e1@me.com)"
             />
 
             <label className="text-xl font-semibold pt-2" htmlFor="password">
@@ -46,7 +46,7 @@ const Login = ({ handleLogin }) => {
               type="password"
               value={password}
               id="password"
-              placeholder="Enter your password"
+              placeholder="Enter your password (123)"
             />
             <div className="w-full flex  justify-center">
               <button

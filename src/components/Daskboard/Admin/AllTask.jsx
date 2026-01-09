@@ -20,7 +20,7 @@ const AllTask = () => {
         <p className="text-center text-xl">Employee Task Details</p>
       </div>
 
-      <div className="h-[80%] overflow-auto">
+      <div id="adminalltask" className="h-[80%] overflow-auto">
         {userData?.employees?.map((emp, idx) => {
           const active = emp.tasks.filter((t) => t.active).length;
           const completed = emp.tasks.filter((t) => t.completed).length;
