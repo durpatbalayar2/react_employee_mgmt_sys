@@ -8,11 +8,10 @@ const Header = ({changeUser,data,isAdmin}) => {
   };
 
   return (
-    <div className=" flex bg-amber-950 items-center justify-between px-5 py-1">
+    <div className=" flex bg-gray-600 items-center justify-between px-5 py-1">
       <div>
         <p className="text-2xl">Hello,</p>
         <h1 className="text-4xl font-semibold">
-          
           {isAdmin ? "Admin" : data?.firstName} 👋
         </h1>
       </div>

@@ -1,6 +1,7 @@
 import { createContext, useState } from "react";
 import { getlocalStorage, setlocalStorage } from "../utils/localStorage";
 import { useEffect } from "react";
+import Footer from "../other/Footer";
 
 export const AuthContext = createContext();
 
@@ -18,6 +19,7 @@ const AuthProvider = ({ children }) => {
   return (
     <div>
       <AuthContext.Provider value={[userData,setUserData]}>{children}</AuthContext.Provider>
+      <Footer/>
     </div>
   );
 };
