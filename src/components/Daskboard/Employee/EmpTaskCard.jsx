@@ -11,19 +11,19 @@ const EmpTaskCard = ({ data }) => {
       id="tasklist"
       className=" flex items-center justify-start flex-nowrap gap-5 w-full   h-[54%]  mt-10 pb-5  overflow-x-auto"
     >
-      {data.tasks.map((elem) => {
+      {data.tasks.map((elem,idx) => {
         if (elem.active) {
-          return <AcceptTask />;
+          return <AcceptTask key={idx} />;
         }
 
         if (elem.newTask) {
-          return <NewTask />;
+          return <NewTask key={idx} />;
         }
         if (elem.completed) {
-          return <CompleteTask />;
+          return <CompleteTask key={idx} />;
         }
         if (elem.failed) {
-          return <FailedTask />;
+          return <FailedTask key={idx} />;
         }
       })}
     </div>

@@ -1,5 +1,3 @@
-
-
 const employees = [
   {
     id: 1,
@@ -120,7 +118,7 @@ const employees = [
       },
       {
         active: false,
-        newTask: false,
+        newTask: true,
         completed: true,
         failed: false,
         taskTitle: "SEO optimization",
@@ -138,14 +136,14 @@ const employees = [
     password: "123",
     taskCounts: {
       active: 1,
-      newTask: 0,
+      newTask: 1,
       completed: 1,
       failed: 0,
     },
     tasks: [
       {
-        active: true,
-        newTask: false,
+        active: false,
+        newTask: true,
         completed: false,
         failed: false,
         taskTitle: "Server monitoring",
@@ -154,9 +152,9 @@ const employees = [
         category: "DevOps",
       },
       {
-        active: false,
+        active: true,
         newTask: false,
-        completed: true,
+        completed: false,
         failed: false,
         taskTitle: "Deploy staging build",
         taskDescription: "Deploy latest build to staging",
@@ -166,8 +164,6 @@ const employees = [
     ],
   },
 ];
-
- 
 
 const admin = [
   {
