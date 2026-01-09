@@ -8,7 +8,7 @@ import { AuthContext } from "./context/AuthProvider";
 const App = () => {
   const [user, setUser] = useState(null);
   const [loggedInUserData, setLoggedInUserData] = useState(null);
-  const authData = useContext(AuthContext);
+  const [authData] = useContext(AuthContext);
 
 
 
@@ -54,10 +54,10 @@ const App = () => {
       {!user ? <Login handleLogin={handleLogin} /> : ""}
 
       {user == "admin" ? (
-        <AdminDashboard />
-      ) : (user == "employee" ?<EmployeeDashboard data ={loggedInUserData} /> :null )}
-       
-      
+        <AdminDashboard changeUser={setUser} />
+      ) : user == "employee" ? (
+        <EmployeeDashboard changeUser={setUser} data={loggedInUserData} />
+      ) : null}
     </>
   );
 };
