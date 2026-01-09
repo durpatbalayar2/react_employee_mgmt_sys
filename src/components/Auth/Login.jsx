@@ -15,7 +15,7 @@ const Login = ({ handleLogin }) => {
   return (
     <>
       <div className=" flex items-center justify-center bg-gray-500 w-full h-screen  ">
-        <div className="  w-1/4 h-[80%] flex flex-col items-center gap-2 bg-linear-to-b from-[#1b57849c] to-[#1e1c1cc9]  rounded-2xl shadow-[0px_2px_4px_3px_#fff]  pl-2  text-white">
+        <div className=" w-[80%] h-[50%] lg:w-[50%] lg:h-[65%] flex flex-col items-center gap-2 bg-linear-to-b from-[#1b57849c] to-[#1e1c1cc9]  rounded-2xl shadow-[0px_2px_4px_3px_#fff]  pl-2  text-white">
           <h1 className="text-4xl font-semi-bold uppercase  py-8">Login</h1>
           <form
             onSubmit={(e) => handleSubmit(e)}
@@ -58,13 +58,7 @@ const Login = ({ handleLogin }) => {
             </div>
           </form>
 
-          <p className="text-xl  py-2">
-            Forgot <span className="text-blue-500 ">Username/Password</span> ?
-          </p>
-          <p className="text-xl  py-1">
-            Don't have an account ?
-            <span className="text-blue-500 font-bold">Sign Up</span>
-          </p>
+         
         </div>
       </div>
     </>

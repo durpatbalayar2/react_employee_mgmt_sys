@@ -6,12 +6,18 @@ const AllTask = () => {
 
   return (
     <div className="bg-[#1c1c1c] p-5 mt-5 rounded h-65">
-      <div className="bg-red-400 mb-2 py-2 px-4 flex justify-between rounded">
+      {/* Desktop View */}
+      <div className="hidden lg:flex bg-red-400 mb-2 py-2 px-4 justify-between rounded">
         <h2 className="w-1/4 text-center">Employee Name</h2>
         <h3 className="w-1/4 text-center">Task Category</h3>
         <h5 className="w-1/4 text-center">Active</h5>
         <h5 className="w-1/4 text-center">Completed</h5>
         <h5 className="w-1/4 text-center">Failed</h5>
+      </div>
+
+      {/* Mobile View */}
+      <div className="lg:hidden bg-gray-600 p-3 rounded">
+        <p className="text-center text-xl">Employee Task Details</p>
       </div>
 
       <div className="h-[80%] overflow-auto">

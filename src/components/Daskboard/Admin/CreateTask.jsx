@@ -51,57 +51,57 @@ const CreateTask = () => {
   };
 
   return (
-    <div className="p-5 bg-[#1c1c1c] mt-7 rounded">
+    <div className="p-5 bg-[#1c1c1c] mt-7 rounded ">
       <form
         onSubmit={handleSubmit}
-        className="w-full flex flex-wrap justify-between"
+        className="w-full  flex flex-col lg:flex-row flex-wrap  lg:justify-between"
       >
-        <div className="w-1/2">
-          <h3 className="text-sm text-gray-300">Task Title</h3>
+        <div className=" lg:w-1/2 ">
+          <h3 className=" text-xl lg:text-sm text-gray-300">Task Title</h3>
           <input
             value={taskTitle}
             onChange={(e) => setTaskTitle(e.target.value)}
-            className="text-sm py-1 px-2 w-4/5 border mb-4 bg-transparent"
+            className="text-xl lg:text-sm py-1 px-2 w-full  lg:w-4/5 border mb-4 bg-transparent"
             type="text"
           />
 
-          <h3 className="text-sm text-gray-300">Date</h3>
+          <h3 className="text-xl lg:text-sm text-gray-300">Date</h3>
           <input
             value={taskDate}
             onChange={(e) => setTaskDate(e.target.value)}
-            className="text-sm py-1 px-2 w-4/5 border mb-4 bg-transparent"
+            className="text-xl lg:text-sm py-1 px-2 w-full  lg:w-4/5 border mb-4 bg-transparent"
             type="date"
           />
 
-          <h3 className="text-sm text-gray-300">Assign To</h3>
+          <h3 className="text-xl lg:text-sm text-gray-300">Assign To</h3>
           <input
             value={assignTo}
             onChange={(e) => setAssignTo(e.target.value)}
-            className="text-sm py-1 px-2 w-4/5 border mb-4 bg-transparent"
+            className="text-xl lg:text-sm py-1 px-2 w-full  lg:w-4/5 border mb-4 bg-transparent"
             type="text"
             placeholder="Employee First Name"
           />
 
-          <h3 className="text-sm text-gray-300">Category</h3>
+          <h3 className="text-xl lg:text-sm text-gray-300">Category</h3>
           <input
             value={taskCategory}
             onChange={(e) => setTaskCategory(e.target.value)}
-            className="text-sm py-1 px-2 w-4/5 border mb-4 bg-transparent"
+            className="text-xl lg:text-sm py-1 px-2 w-full  lg:w-4/5 border mb-4 bg-transparent"
             type="text"
           />
         </div>
 
-        <div className="w-2/5">
-          <h3 className="text-sm text-gray-300">Description</h3>
+        <div className="lg:w-2/5">
+          <h3 className="text-xl lg:text-sm text-gray-300">Description</h3>
           <textarea
             value={taskDescription}
             onChange={(e) => setTaskDescription(e.target.value)}
-            className="w-full h-44 border bg-transparent"
+            className="w-full text-xl lg:text-sm h-44 border bg-transparent"
           ></textarea>
 
           <button
             type="submit"
-            className="bg-emerald-500 py-3 mt-4 w-full rounded"
+            className="bg-emerald-500 py-3 mt-4 w-full rounded text-xl"
           >
             Create Task
           </button>
