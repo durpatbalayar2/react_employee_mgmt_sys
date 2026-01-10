@@ -6,14 +6,14 @@ const employees = [
     password: "123",
     taskCounts: {
       active: 1,
-      newTask: 1,
+      newTask: 0,
       completed: 1,
       failed: 0,
     },
     tasks: [
       {
         active: true,
-        newTask: true,
+        newTask: false,
         completed: false,
         failed: false,
         taskTitle: "Create landing page",
@@ -40,7 +40,7 @@ const employees = [
     email: "e2@me.com",
     password: "123",
     taskCounts: {
-      active: 2,
+      active: 1,
       newTask: 0,
       completed: 0,
       failed: 1,
@@ -75,14 +75,14 @@ const employees = [
     email: "e3@me.com",
     password: "123",
     taskCounts: {
-      active: 1,
+      active: 0,
       newTask: 1,
       completed: 0,
       failed: 0,
     },
     tasks: [
       {
-        active: true,
+        active: false,
         newTask: true,
         completed: false,
         failed: false,
@@ -118,7 +118,7 @@ const employees = [
       },
       {
         active: false,
-        newTask: true,
+        newTask: false,
         completed: true,
         failed: false,
         taskTitle: "SEO optimization",
@@ -136,16 +136,16 @@ const employees = [
     password: "123",
     taskCounts: {
       active: 1,
-      newTask: 1,
-      completed: 1,
-      failed: 0,
+      newTask: 0,
+      completed: 0,
+      failed: 1,
     },
     tasks: [
       {
         active: false,
-        newTask: true,
+        newTask: false,
         completed: false,
-        failed: false,
+        failed: true,
         taskTitle: "Server monitoring",
         taskDescription: "Monitor server logs and uptime",
         taskDate: "2026-01-09",

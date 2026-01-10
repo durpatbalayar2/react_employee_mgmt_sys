@@ -4,7 +4,7 @@ const AcceptTask = ({data}) => {
 
 
   return (
-    <div className=" shrink-0 h-full w-85 lg:w-95 bg-red-400 rounded-xl">
+    <div className=" shrink-0 h-60 w-95 bg-red-400 rounded-xl">
       <div className="flex items-center justify-between px-3 py-4">
         <h3 className="bg-red-600 px-5 py-1 rounded-lg text-base">
           {data.category}
@@ -13,9 +13,9 @@ const AcceptTask = ({data}) => {
       </div>
       <h1 className="text-xl lg:text-2xl font-bold px-3 mt-2">{data.taskTitle}</h1>
 
-      <p className="text-xl px-3 mt-2 lg:mt-5">{data.taskDescription}</p>
+      <p className="text-xl px-3  mt-5">{data.taskDescription}</p>
 
-      <div className="flex justify-between mt-2 mb-2 lg:mt-4 px-2">
+      <div className="flex justify-between mt-2 mb-2  px-2">
         <button className="bg-green-500 py-1 px-2 text-sm rounded  ">
           Mark as Completed
         </button>
