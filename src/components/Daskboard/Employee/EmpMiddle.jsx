@@ -1,4 +1,8 @@
 const EmpMiddle = ({ data }) => {
+
+  if (!data) {
+    return null; 
+  }
   const counts = {
     newTask: data.tasks.filter((t) => t.newTask).length,
     active: data.tasks.filter((t) => t.active).length,

@@ -39,7 +39,7 @@ const App = () => {
       return "admin";
     }
 
-    if (authData) {
+    if (authData && authData.employees) {
       const employee = authData.employees.find(
         (e) => email === e.email && password === e.password
       );
