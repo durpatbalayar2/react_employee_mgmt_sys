@@ -1,6 +1,6 @@
 import React from 'react'
 
-const CompleteTask = ({data}) => {
+const CompleteTask = ({ data, idx, onRemoveTask }) => {
   return (
     <div className=" shrink-0 h-60 w-95 bg-gray-400 rounded-xl">
       <div className="flex items-center justify-between px-3 py-4">
@@ -13,14 +13,14 @@ const CompleteTask = ({data}) => {
         {data.taskTitle}
       </h1>
 
-      <p className="text-xl px-3 mt-5">{data.taskDescription}</p>
-      <div className="mt-2 px-2">
-        <button className="bg-blue-500 py-1 px-2 mt-5 text-sm rounded w-full">
-          Completed
+      <p className="text-xl px-3 ">{data.taskDescription}</p>
+      <div className="mt-2 px-2 text-center">
+        <button onClick={()=>onRemoveTask(idx)} className="bg-blue-500 py-1 px-2 mt-5 rounded  text-center text-[18px]">
+          Task Completed ✅
         </button>
       </div>
     </div>
   );
-}
+};
 
 export default CompleteTask

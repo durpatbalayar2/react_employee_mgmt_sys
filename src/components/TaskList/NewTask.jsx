@@ -1,8 +1,9 @@
 
 
-const NewTask = ({data}) => {
+const NewTask = ({data,onUpdateTask,idx}) => {
 
-  
+
+ 
 
   return (
     <div className=" shrink-0 h-60 w-95 bg-green-400 rounded-xl">
@@ -16,8 +17,8 @@ const NewTask = ({data}) => {
       {data.taskDescription}
       </p>
 
-      <div className="mt-2 px-2 ">
-        <button className="bg-yellow-700 py-1 px-2 mt-5 text-sm rounded w-full">
+      <div className="mt-2 px-2 text-center ">
+        <button onClick={()=>onUpdateTask(idx, "active")} className="bg-yellow-700 py-1 px-2 mt-5 text-[18px] rounded  active:scale-80 transition-all ease-linear">
           Accept Task
         </button>
       </div>

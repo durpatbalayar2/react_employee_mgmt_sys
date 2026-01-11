@@ -24,11 +24,15 @@ const AllTask = () => {
 
       <div id="adminalltask" className="h-[80%] overflow-auto">
         {userData?.employees?.map((emp, idx) => {
-          const newTask = emp.taskCounts.newTask;
+         
+          const newTask = emp.tasks.filter((t) => t.newTask).length;
+
           const name = emp.firstName;
-          const category = emp.tasks[0].category;
-          const taskCompleted = emp.taskCounts.completed;
-          const taskFailed = emp.taskCounts.failed;
+          const category =
+            emp.tasks.length > 0 ? emp.tasks[0].category : "No Task";
+
+          const taskCompleted = emp.tasks.filter((t) => t.completed).length;
+          const taskFailed = emp.tasks.filter((t) => t.failed).length;
 
           return (
             <div
