@@ -1,12 +1,22 @@
 import { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 
 const Login = ({ handleLogin }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
+  const navigate = useNavigate()
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    handleLogin(email, password);
+
+    const role = handleLogin(email, password);
+
+    if (role === "admin") {
+      navigate("/admin");
+    } else if (role === "employee") {
+      navigate("/employee");
+    }
 
     setEmail("");
     setPassword("");
@@ -14,7 +24,7 @@ const Login = ({ handleLogin }) => {
 
   return (
     <>
-      <div className=" flex items-center justify-center bg-gray-500 w-full h-screen  ">
+      <div className=" flex items-center justify-center bg-gray-950 w-full h-screen  ">
         <div className=" w-[80%] h-[50%] lg:w-[50%] lg:h-[65%]  flex flex-col items-center gap-2 bg-linear-to-b from-[#1b57849c] to-[#1e1c1cc9]  rounded-2xl shadow-[0px_2px_4px_3px_#fff]  pl-2  text-white">
           <h1 className="text-4xl font-semi-bold uppercase  py-8">Login</h1>
           <form
@@ -58,7 +68,11 @@ const Login = ({ handleLogin }) => {
             </div>
           </form>
 
-         
+          <div className="flex justify-center mt-4">
+            <Link to="/" className="  text-blue-300 text-2xl font-semibold cursor-pointer active:scale-90 ">
+              ← Back to Home
+            </Link>
+          </div>
         </div>
       </div>
     </>
