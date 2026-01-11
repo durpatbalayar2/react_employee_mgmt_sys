@@ -80,7 +80,11 @@ const App = () => {
         path="/employee"
         element={
           user === "employee" ? (
-            <EmployeeDashboard changeUser={setUser} data={loggedInUserData} />
+            authData ? (
+              <EmployeeDashboard changeUser={setUser} data={loggedInUserData} />
+            ) : (
+              <div className="text-3xl items-center text-white">Loading...</div>
+            )
           ) : (
             <Navigate to="/login" />
           )
